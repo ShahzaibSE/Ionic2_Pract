@@ -1,0 +1,75 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Profile
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+  <ion-card>
+    <ion-card-header id="header_text">
+      SHAHZAIB NOOR
+    </ion-card-header>
+    
+    
+    <ion-card-content id="profile-background">
+            <img id="profile_pic" src="mypic.jpg" alter="Shahzaib">
+        </ion-card-content>
+  </ion-card>
+  
+  <br/>
+  <br/>
+  <br/>
+  
+  <ion-card>
+    <!--<ion-card-content id="description_section">-->
+     <ion-card-content id="description" style="background-color:lightgreen">   
+        <ion-header>Description:</ion-header>  
+        </ion-card-content>
+    
+    <ion-card-content id="descritption_text">
+         <p>I am a graduate in Computer Science from <a id="hypertext" href="www.ssuet.edu.pk/">Sir Syed University of Technology & Engineering</a></p>
+        </ion-card-content>
+    
+    <br/>    
+    
+   </ion-card>
+   
+   
+   <ion-card>
+       <ion-header id="contact_heading">
+            <ion-card-content>Contact Details</ion-card-content>
+         </ion-header>
+       <br/>
+      
+     <ion-list>   
+       
+        <!--Telephone No:-->
+        <ion-card-content class="contact_details_1"> <!--id="contact_details">-->
+        <label>Telephone No:</label>
+        <ion-icon  id="plainText"  name="call"></ion-icon> 
+               <a href="tel:+923008203588">+923008203588</a>
+        </ion-card-content>
+        
+        <!--Email-->
+        <ion-card-content class="contact_details_1">
+            <label>Email:</label>
+            <ion-icon id="plainText2" name="mail"></ion-icon>
+            <a href="mailto:shahzaibnoor40@gmail.com">shahzaibnoor40@gmail.com</a>
+            </ion-card-content>
+            
+            <ion-card-content class="contact_details_1">
+            <label>Twitter:</label>
+            <ion-icon id="plainText3" class="icon ion-twitter"></ion-icon>
+            <a href="twitter:twitter.com">Twitter.com</a>
+            </ion-card-content>
+       
+           
+      </ion-list>
+       <!--<ion-card-content>
+             <ion-icon name="call"></ion-icon>
+             <a href="tel:+923122091385"></a>
+          </ion-car-content>-->
+       
+   </ion-card>
+  
+  </ion-content>
