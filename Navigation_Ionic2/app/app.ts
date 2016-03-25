@@ -1,5 +1,6 @@
 import {App, Platform} from 'ionic-angular';
 import {HomePage} from './pages/home/home';
+import {Data} from './pages/DataPage/datapage';
 
 
 @App({
@@ -8,7 +9,7 @@ import {HomePage} from './pages/home/home';
 })
 export class MyApp {
   rootPage: any = HomePage;
-
+  //rootPage : any = Data;
   constructor(platform: Platform) {
     platform.ready().then(() => {
       // The platform is now ready. Note: if this callback fails to fire, follow

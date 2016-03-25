@@ -1,23 +1,29 @@
 <ion-navbar *navbar>
   <ion-title>
-    About
+    Data
   </ion-title>
 </ion-navbar>
 
 <ion-content class="home">
   <ion-card>
     <ion-card-header>
-      About Header
+      Data Header
     </ion-card-header>
     <ion-card-content>
-      Welcome to About Section
+      Welcome to Data Section
     </ion-card-content>
     
     <ion-card-content>
         
-        <button default large (click)="gotoData()">Go To Data</button>
+        <button secondary large (click)="gotoList()">Go To List</button>
         
     </ion-card-content>
+    
+    <!--<ion-card-content>
+        
+        <button default large (click)="gotoList()">Go To List</button>
+        
+    </ion-card-content>-->
     
   </ion-card>
 </ion-content>
