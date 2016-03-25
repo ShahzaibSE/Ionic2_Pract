@@ -20,7 +20,7 @@ export class Data {
         this.nav = nav;
     }
     
-    gotoList()
+    /*gotoList()
     {
         var data1 = this.mybiodata1;
         var data2 = this.mybiodata2;
@@ -30,7 +30,7 @@ export class Data {
             param1 = data1;
             param2 = data2;
             return callback(param1,param2)
-        }*/
+        }
         
         var obj :{thing1:string,thing2:string} = {thing1:data1,thing2:data2};
         
@@ -40,6 +40,15 @@ export class Data {
         });
         
         //his.nav.push(List,obj);
+    }*/
+    
+    push_data(input_1:HTMLInputElement , input_2:HTMLInputElement)
+    {
+        //Now We're taking input from the user and passing them as navparameters to the 'List' Component.
+        this.nav.push(List,{
+            thing1 : input_1.value,
+            thing2 : input_2.value
+        });
     }
     
     /*gotoList()

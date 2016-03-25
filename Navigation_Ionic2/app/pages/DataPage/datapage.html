@@ -15,8 +15,26 @@
     
     <ion-card-content>
         
+       <ion-item> 
+       <ion-label floating>Input #1:</ion-label> 
+       <ion-input type="text" value="" #input_1></ion-input>  
+       </ion-item> 
+           
+       <br/>
+       
+       <ion-item>
+       <ion-label floating>Input #2:</ion-label> 
+       <ion-input type="text" value=""  #input_2></ion-input>        
+       </ion-item> 
+        <!--<ion-input type="text" value=""></ion-input>-->
+    </ion-card-content>
+    
+    <ion-card-content>
+        <!--
         <button secondary large (click)="gotoList()">Go To List</button>
+        -->
         
+        <button type="submit" secondary large (click)="push_data(input_1,input_2)">Submit</button>
     </ion-card-content>
     
     <!--<ion-card-content>
