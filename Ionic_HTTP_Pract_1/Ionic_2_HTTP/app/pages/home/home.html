@@ -1,0 +1,65 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Home
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+  <ion-card>
+    <ion-card-header>
+      Card Header
+    </ion-card-header>
+    <ion-card-content>
+      Hello World
+    </ion-card-content>
+    
+    
+     
+               <button block secondary (click)="makeRequest()">Get Posts</button>
+               
+               <ion-list>
+                   <ion-item *ngFor="#item of list_posts">
+                     <a (click)="gotoDetail(item)"><p>{{item.title}}</p></a>
+                     <!--<p>{{item.userId}}</p>-->
+                   </ion-item>
+                   
+                   <ion-item *ngFor="#n of data">
+                          <p>{{n.id}}</p>
+                          <p>{{n.name}}</p>
+                       </ion-item>
+                </ion-list>
+       
+      
+        
+            <!--<ion-item>
+                <p *ngFor = "#item of data">{{items|json}}</p>
+            </ion-item>-->
+            
+    <!--<ion-list>
+          <ion-item>
+              <p *ngFor = "#items of list_posts">{{items|json}}</p>
+              </ion-item>
+        </ion-list>-->
+        
+        <!--<ion-card>
+            
+            <ion-card-content>
+                  <button block danger (click)="gotoDetail()">Go to Details</button>
+                </ion-card-content>
+            
+            </ion-card>-->    
+            
+         <!--<ion-card>
+                  <ion-list *ngFor = "#item of list_posts">
+                          <ion-item>
+                              <a (click)="gotoDetail(item)"><p>{{item.title}}</p></a>
+                          </ion-item>
+                      </ion-list>
+             </ion-card>-->   
+    
+        
+        <!--<ion-list>
+              <ion-item *ngFor=""></ion-item>
+            </ion-list>-->
+  </ion-card>
+</ion-content>

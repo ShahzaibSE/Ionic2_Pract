@@ -1,0 +1,33 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Details
+  </ion-title>
+</ion-navbar>
+
+<ion-content>
+ 
+    
+    <ion-card>
+        <!--<ion-card-content>
+               <button block outline secondary (click)="makeRequest()">Get Posts</button>
+            </ion-card-content>-->
+            
+         <ion-card-content>
+                <button block danger (click)="makeDetailrequest()">Get Comments</button>
+             </ion-card-content>    
+             
+         
+          <ion-list>
+                 <ion-item *ngFor="#comments of comments">
+                         <p>{{comments|json}}</p>
+                     </ion-item>
+              </ion-list>
+        
+    <!--<ion-list>
+          <ion-item>
+              <p *ngFor = "items of list_of_items">{{items|json}}</p>
+              </ion-item>
+        </ion-list>-->    
+    
+  </ion-card>
+</ion-content>
