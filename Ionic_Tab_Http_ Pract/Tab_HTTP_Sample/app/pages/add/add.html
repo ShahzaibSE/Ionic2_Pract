@@ -1,0 +1,39 @@
+
+<ion-navbar *navbar>
+  <ion-title>
+    Add Superhero
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="page3">
+
+     <ion-card>
+         
+         <ion-list>
+             
+             <ion-item>
+                   <ion-label floating>Superheor ID</ion-label>  
+                   <ion-input type="text" #id></ion-input>
+                 </ion-item>
+                 
+              <ion-item>
+                   <ion-label floating>Superheor Name</ion-label>
+                   <ion-input type="text" #codeName></ion-input>
+                 </ion-item>
+             
+             </ion-list>
+             
+            <ion-card-content>
+                   <button block round danger (click)="addInfo(id,codeName)">Submit</button>
+                </ion-card-content> 
+         
+         </ion-card>
+         
+         <ion-card>
+               <ion-card-content *ngFor = "#n of Superhero_Data | async">
+                   <p>{{ n.$value }}</p>
+                   <button default (click)="removeItem(n.$key)">Remove</button>
+               </ion-card-content>
+             </ion-card>
+    
+</ion-content>

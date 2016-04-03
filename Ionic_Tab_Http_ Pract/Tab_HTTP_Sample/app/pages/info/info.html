@@ -1,0 +1,17 @@
+
+<ion-navbar *navbar>
+  <ion-title>
+    Information
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="page2">
+    
+    <ion-card>
+       <ion-card-content *ngFor = "#n of firebase_Superhero_Data | async">
+            <p>{{ n.$value }}</p>
+            <button default (click)="removeItem(n.$key)">Remove</button>
+          </ion-card-content>
+     </ion-card>
+
+</ion-content>
