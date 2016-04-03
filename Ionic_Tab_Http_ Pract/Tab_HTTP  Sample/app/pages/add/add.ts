@@ -50,10 +50,13 @@ export class Add {
   
   addInfo(id:HTMLInputElement,codeName:HTMLInputElement)
   {
-      //var obj : {id:any , codeName:any} = {id:id.value , codeName:codeName.value};
-      this.Superhero_Data.add(id.value);
-      this.Superhero_Data.add(codeName.value);
+      var obj : {id:any , codeName:any} = {id:id.value , codeName:codeName.value};
+      /*this.Superhero_Data.add(id.value);
+      this.Superhero_Data.add(codeName.value);*/
+      this.Superhero_Data.add(JSON.stringify(obj));
       
+      id.value = "";
+      codeName.value = "";
       //this.some_property
               
   }

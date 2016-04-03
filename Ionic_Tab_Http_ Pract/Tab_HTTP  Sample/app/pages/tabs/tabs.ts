@@ -2,6 +2,7 @@ import {Page} from 'ionic-angular';
 import {Home} from '../home/home';
 import {Info} from '../info/info';
 import {Add} from '../add/add';
+import {About} from './../about/about';
 
 
 @Page({
@@ -13,5 +14,7 @@ export class TabsPage {
   tab1Root: any = Home;
   tab2Root: any = Add;
   tab3Root: any = Info;
+  tab4Root : any = About;
   //tab3Root: any = Page3;
+  
 }
