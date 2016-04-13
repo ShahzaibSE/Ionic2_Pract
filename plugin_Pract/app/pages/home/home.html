@@ -1,0 +1,23 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Home
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+    
+   <ion-card> 
+    <ion-card-content>
+        <h1>Pluggin Demo</h1>
+    </ion-card-content>
+    
+    <ion-card-content>
+           <button block round primary (click)="getPicture()">Get Picture</button>
+        </ion-card-content>
+        </ion-card>
+        
+     <ion-card>
+         <img src="{{ImageData}}" alter="Captured Picture"/>
+     </ion-card>   
+  
+</ion-content>

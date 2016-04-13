@@ -23,4 +23,11 @@ export class Info {
       this.firebase_Superhero_Data.remove(id);
   }
    
+  showData()
+  {
+      var af:AngularFire;
+      
+      var arrs = af.list('/Superhero_Data').toArray();
+      console.log(arrs)
+  } 
 }
