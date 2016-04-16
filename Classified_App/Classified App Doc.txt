@@ -1,0 +1,4 @@
+> .Action sheets can be used to open a form.
+
+>. Ionic 2 Action Sheets & Modals can be used together.
+        

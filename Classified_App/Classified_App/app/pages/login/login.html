@@ -1,0 +1,36 @@
+<ion-navbar id="title_text"  custom_theme *navbar>
+  <ion-title>
+    Sign In
+  </ion-title>
+</ion-navbar>
+
+        
+<ion-content>
+    
+    <ion-list>
+            
+            <ion-item>
+               <ion-label floating>Email</ion-label>
+               <ion-input></ion-input>
+            </ion-item>
+            
+            <ion-item>
+               <ion-label floating>Password</ion-label>
+               <ion-input></ion-input>
+            </ion-item>
+             
+        </ion-list>
+        
+        <ion-row>
+            <ion-col width-90>
+         <ion-card-content>
+                    <a (click)="gotoForgot_Password()">Forgot your password?</a>
+                </ion-card-content> 
+                </ion-col>
+                </ion-row>
+        
+        <ion-card-content>
+            <button block round default>Log In</button>
+        </ion-card-content>
+  
+</ion-content>

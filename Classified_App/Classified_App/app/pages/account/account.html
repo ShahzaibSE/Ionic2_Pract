@@ -1,0 +1,50 @@
+<ion-navbar id="title_text"  custom_theme *navbar>
+  <ion-title>
+    Register Yourself
+  </ion-title>
+</ion-navbar>
+
+        
+<ion-content>
+    
+    <ion-list>
+            <ion-item>
+               <ion-label floating>First Name</ion-label>
+               <ion-input></ion-input>
+            </ion-item>
+            
+            <ion-item>
+               <ion-label floating>Last Name</ion-label>
+               <ion-input></ion-input>
+            </ion-item>
+            
+            <ion-item>
+               <ion-label floating>Email</ion-label>
+               <ion-input></ion-input>
+            </ion-item>
+            
+            <ion-item>
+               <ion-label floating>Password</ion-label>
+               <ion-input></ion-input>
+            </ion-item>
+            
+            <ion-item>
+               <ion-label floating>Re-enter Password</ion-label>
+               <ion-input></ion-input>
+            </ion-item>
+            
+        </ion-list>
+        
+        <ion-card-content>
+            <button block round default>Submit</button>
+        </ion-card-content>
+        <br/>
+        <ion-row>
+        <ion-col width-100>  
+        <ion-card-content>
+              <p>Already a user? then <a (click)="gotoLogin()">Log in</a>
+          </ion-card-content>
+          </ion-col>
+          </ion-row>
+  
+</ion-content>
