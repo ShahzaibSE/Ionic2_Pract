@@ -1,0 +1,57 @@
+<ion-navbar custom_theme *navbar>
+  <ion-title>
+    To-Do App
+  </ion-title>  
+</ion-navbar>
+
+<ion-row custom_theme>
+  <ion-col width-33>
+           <button primary round block>
+             <ion-icon name="add-circle"></ion-icon>
+           </button>
+        </ion-col>
+        
+      <ion-col width-33>
+           <button primary round block>
+             <ion-icon name="clipboard"></ion-icon>
+           </button>
+        </ion-col>  
+        
+        <ion-col width-33>
+           <button primary round block>
+             <ion-icon name="create"></ion-icon>
+           </button>
+        </ion-col>
+       </ion-row>
+
+<ion-content>
+  
+  <form>
+   <ion-list>
+            <ion-item>
+               <ion-label floating>Task Id</ion-label>
+               <ion-input type="text" name="id" #id></ion-input>
+            </ion-item>
+            
+            <ion-item>
+               <ion-label floating>Task Name</ion-label>
+               <ion-input type="text" name="name" #name></ion-input>
+            </ion-item>
+            
+            <!--<ion-item>
+               <ion-label floating>Task Description</ion-label>
+               <ion-input type="text" name="name" #description></ion-input>
+            </ion-item>-->
+            
+        </ion-list>
+        
+        <ion-card-content>
+            <button block round danger (click)="addTask(id,name)">Submit</button>
+        </ion-card-content>
+        </form>
+        
+        <!--<ion-card-content>
+            <button block round primary (click)="testAPI()">Test</button>
+        </ion-card-content>-->
+  
+</ion-content>

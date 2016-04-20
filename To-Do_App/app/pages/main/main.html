@@ -1,0 +1,49 @@
+<ion-navbar custom_theme *navbar>
+  <ion-title>
+    To-Do App
+  </ion-title>  
+</ion-navbar>
+
+<ion-row id="menu_background">
+  <ion-col width-33>
+           <button (click)="gotoPage(_Add)" primary round block>
+             <ion-icon name="add-circle"></ion-icon>
+           </button>
+        </ion-col>
+        
+      <ion-col width-33>
+           <button (click)="gotoPage(_Show)" primary round block>
+             <ion-icon name="clipboard"></ion-icon>
+           </button>
+        </ion-col>  
+        
+        <ion-col width-33>
+           <button primary round block>
+             <ion-icon name="create"></ion-icon>
+           </button>
+        </ion-col>
+       </ion-row>
+
+<ion-content id="content_background">
+  
+  <ion-card>
+       <img id="imagee_dimensions" src="images/To-Do-App-Logo.png" alter="To-Do-App-Logo">
+    </ion-card>
+  
+  
+      
+      <!--<ion-col width-50>
+          <image src="images/To-Do-App-Logo.png" alter="To-Do-App-Logo">
+        </ion-col>-->
+      
+      <!--<ion-col width-100>
+       <ion-card-content id="About_Description">
+            <h2>Todo is the powerful to-do list app and task manager 
+                to help you capture, organize, and complete your task lists and projects.</h2>
+       </ion-card-content>
+      </ion-col> 
+    </ion-row>-->
+    
+   
+  
+</ion-content>
