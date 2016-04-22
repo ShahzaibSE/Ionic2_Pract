@@ -12,11 +12,6 @@ export class Todo_Service
 {
     Todos:Array<Todo> = []
     
-    /*constructor(public nav:NavController)
-    {
-        this.nav = nav;
-    }*/
-    
     addTodo(Tid,Tname)
     {
         var tmp_obj = {Tid:Tid.value,Tname:Tname.value};
@@ -82,11 +77,24 @@ export class Todo_Service
             if(localStorage.key(i))
             {
                 console.log("Key Found");
-                localStorage.setItem(Tid,JSON.stringify({Tid:Tid.value,Tname:Tname.value}));
+                localStorage.setItem(localStorage.key(i),JSON.stringify({Tid:Tid,Tname:Tname}));
+                break;
+                /*let editedAlert =  Alert.create({
+                    title:"Task has been Edited"
+                })
+               
+                this.nav.present(editedAlert);*/
+                //alert('Task has been edited');
             }
             else
             {
                 console.log("Key not found");
+               /* let NoteditedAlert =  Alert.create({
+                    title:"Task not found"
+                })
+                
+                this.nav.present(NoteditedAlert);*/
+                //alert('Task not found');
             }
         }
         
