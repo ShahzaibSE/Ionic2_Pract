@@ -72,6 +72,46 @@ export class Todo_Service
     
     deleteTask()
     {
+        //Delete your tasks.
+    }
+    
+    editTask(Tid,Tname)
+    {
+        for(let i=0;i<localStorage.length;i++)
+        {
+            if(localStorage.key(i))
+            {
+                console.log("Key Found");
+                localStorage.setItem(Tid,JSON.stringify({Tid:Tid.value,Tname:Tname.value}));
+            }
+            else
+            {
+                console.log("Key not found");
+            }
+        }
         
+        //Test Snippet Code.
+        /*if(localStorage.key(1) == "2")
+        {
+            console.log("Specfic key found");
+        }
+        else
+        {
+            console.log("Specfic key not found");
+        }*/
+    }
+    
+    test()
+    {
+        let item_Key = localStorage.key(1);
+        console.log(item_Key);
+        
+        let test_keys = [];
+        for(var i=0;i<localStorage.length;i++)
+        {
+            test_keys.push(localStorage.key(i));
+        }
+        console.log("Names of nth keys.");
+        console.log(test_keys);
     }
 }
