@@ -30,5 +30,7 @@ export class Edit {
   editTask(Tid:HTMLInputElement,Tname:HTMLInputElement)
   {
     this.ToDo.editTask(Tid.value,Tname.value);
+    Tid.value = "";
+    Tname.value ="";
   }
 }
