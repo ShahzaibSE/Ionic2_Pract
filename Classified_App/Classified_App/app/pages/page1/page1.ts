@@ -2,9 +2,11 @@ import {Page,NavController} from 'ionic-angular';
 
 //Import Component.
 import {Page2} from './../page2/page2';
+import {Menu} from './../menu/menu';
 
 @Page({
-  templateUrl: 'build/pages/page1/page1.html'
+  templateUrl: 'build/pages/page1/page1.html',
+  //directives:[Menu]
 })
 
 export class Page1 {

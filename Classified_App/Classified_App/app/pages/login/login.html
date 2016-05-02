@@ -10,13 +10,13 @@
     <ion-list>
             
             <ion-item>
-               <ion-label floating>Email</ion-label>
-               <ion-input></ion-input>
+               <ion-label floating >Email</ion-label>
+               <ion-input #email></ion-input>
             </ion-item>
             
             <ion-item>
-               <ion-label floating>Password</ion-label>
-               <ion-input></ion-input>
+               <ion-label floating >Password</ion-label>
+               <ion-input type="password" #password></ion-input>
             </ion-item>
              
         </ion-list>
@@ -30,7 +30,10 @@
                 </ion-row>
         
         <ion-card-content>
-            <button block round default>Log In</button>
+            <!--<button block round default (click)="login(email,password)">Log In</button>-->
+            <button block round default (click)="checkAuthentication(email,password)">
+                <ion-icon name="ios-unlock"></ion-icon>
+            </button>
         </ion-card-content>
   
 </ion-content>

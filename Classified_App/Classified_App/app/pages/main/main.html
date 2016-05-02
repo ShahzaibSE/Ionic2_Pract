@@ -11,12 +11,12 @@
             </button>
         </ion-col>
         <ion-col width-20>
-            <button full>
+            <button full (click)="gotoPage(Add)">
                 <ion-icon name="md-add-circle"></ion-icon>
             </button>
         </ion-col>
         <ion-col width-20>
-            <button full>
+            <button full (click)="gotoPage(search)">
                 <ion-icon name="md-search"></ion-icon>
             </button>
         </ion-col>
@@ -26,18 +26,67 @@
             </button>
         </ion-col>
         <ion-col width-20>
-            <button full  (click)="Register()">
+            <!--<button full  (click)="gotoPage(account)">-->
+            <button full (click)="gotoPage(account)">    
                 <ion-icon name="md-person-add"></ion-icon>
             </button>
         </ion-col>
     </ion-row>
+        
+    <ion-row>
+        <ion-col width-10>
+              <button (click)="gotoPage(_Login)" id="button_position" round dark><ion-icon small name="md-person"></ion-icon></button>
+            </ion-col>
+    </ion-row>
+    
+    <!--Test Button-->
+    <!--<ion-row>
+        <ion-col width-50>
+        <button (click)="gotoPage(_Sample)">Test</button>
+        </ion-col>
+    </ion-row>-->
 
-
-<ion-content class = "main_body_background">
+<!--<ion-content class = "main_body_background">-->
+    
+<ion-content>    
+    <!--<ion-card-content>
+        <h1>{{ yourAds|json}}</h1>
+    </ion-card-content>-->
     
     <!--<ion-menu>
          <ion-list *ngFor = "#cat of catagories">
              </ion-list>
         </ion-menu>-->
+    <!--<ion-card>
+     <ion-card-content>
+         <button block primary round (click)="Test_set()">Set Data</button>
+     </ion-card-content>
+    
+      <ion-card-content>
+         <button block primary round (click)="Test_get()">Get Data</button>
+     </ion-card-content>
+     
+     <ion-card-content>
+         <button block danger round (click)="Test_clear()">Clear Storage</button>   
+     </ion-card-content>
+   </ion-card>-->
+   
+   <ion-card>
+          <h1 id="featured_add">Featured Ads</h1>
+       <ion-card-content>
+           
+       </ion-card-content>
+   </ion-card>
+   
+   <ion-card id="post_area">
+       <ion-card *ngFor = "#ads of Ads">
+         <div id="posts">  
+           <h3>{{ads.title}}</h3>
+           <h3>{{ads.description}}</h3>
+           <h3>{{ads.category}}</h3>
+           <h3>{{ads.price}}</h3>
+         </div>
+       </ion-card>
+   </ion-card>
   
 </ion-content>

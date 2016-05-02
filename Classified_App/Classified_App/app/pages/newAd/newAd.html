@@ -1,0 +1,52 @@
+<ion-navbar id="title_text"  custom_theme *navbar>
+  <ion-title>
+    Add Your Ad
+  </ion-title>
+</ion-navbar>
+
+<ion-content>
+    
+     <ion-list>
+        <ion-item>
+            <ion-label floating>Title</ion-label>
+            <ion-input #title></ion-input>
+        </ion-item>
+        
+        <ion-item>
+            <ion-label floating>Descritption</ion-label>
+            <ion-input #description></ion-input>
+        </ion-item>
+        
+        <!--<ion-item>
+            <ion-card-content>
+                <button><ion-icon name="camera"></ion-icon></button>
+                </ion-card-content>
+        </ion-item>-->
+        
+        <ion-item>
+            <ion-label floating>Catagory</ion-label>
+            <ion-input #category></ion-input>
+        </ion-item>
+        
+        <!--<ion-item>
+               <ion-label floating>Category</ion-label>
+               <ion-select>
+                       <ion-option *ngFor="#c of categories" #category>{{c}}</ion-option>
+                   </ion-select>
+            </ion-item>-->
+        
+        <ion-item>
+            <ion-label floating>Price</ion-label>
+            <ion-input #price></ion-input>
+        </ion-item>
+    </ion-list>
+    
+           
+        <ion-card-content>        
+            <button round block damger><ion-icon name="camera"></ion-icon></button>    
+            <button block round custom_theme_3 (click)="submitAd(title,description,category,price)">Submit</button>
+        </ion-card-content>
+        
+      
+      
+</ion-content>

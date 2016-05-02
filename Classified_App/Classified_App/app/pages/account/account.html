@@ -10,33 +10,39 @@
     <ion-list>
             <ion-item>
                <ion-label floating>First Name</ion-label>
-               <ion-input></ion-input>
+               <ion-input #firstname></ion-input>
             </ion-item>
             
             <ion-item>
                <ion-label floating>Last Name</ion-label>
-               <ion-input></ion-input>
+               <ion-input #lastname></ion-input>
             </ion-item>
             
             <ion-item>
                <ion-label floating>Email</ion-label>
-               <ion-input></ion-input>
+               <ion-input #email></ion-input>
+            </ion-item>
+            
+            <ion-item>
+               <ion-label floating>Phone no</ion-label>
+               <ion-input #phoneNo></ion-input>
             </ion-item>
             
             <ion-item>
                <ion-label floating>Password</ion-label>
-               <ion-input></ion-input>
+               <ion-input type="password" #password></ion-input>
             </ion-item>
             
             <ion-item>
-               <ion-label floating>Re-enter Password</ion-label>
-               <ion-input></ion-input>
+               <ion-label floating>Re-Enter Password</ion-label>
+               <ion-input type="password" #reEnterPassword></ion-input>
             </ion-item>
+            
             
         </ion-list>
         
         <ion-card-content>
-            <button block round default>Submit</button>
+            <button block round default (click)="NewUser_Register(firstname,lastname,email,phoneNo,password,reEnterPassword)">Submit</button>
         </ion-card-content>
         <br/>
         <ion-row>

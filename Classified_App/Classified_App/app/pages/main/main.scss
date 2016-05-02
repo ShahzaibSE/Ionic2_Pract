@@ -1,10 +1,7 @@
-.home {
-  
-}
-
 #title_text
 {
     color:white;
+    text-align: center;
 }
 
 .main_body_background
@@ -15,4 +12,33 @@
 #menu_background
 {
     background-color: #596687;
+}
+
+#button_position
+{
+    position:relative;
+    left:280px;top:10px;
+}
+
+.custom_color
+{
+    background-color: #ff345f
+}
+
+/*Heading Alignments*/
+#featured_add
+{
+    margin-top:20px;
+    margin-left:20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#post_area{
+ margin-bottom:20px;  
+}
+
+#posts{
+    margin-left:20px;
+    padding-top:20px;
+    padding-bottom: 20px;
 }

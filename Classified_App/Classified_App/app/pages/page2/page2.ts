@@ -30,4 +30,9 @@ export class Page2 {
       this.nav.push(Page1);
   }*/
   
+  gotoPage1()
+  {
+      this.nav.push(Page1);
+  }
+  
 }

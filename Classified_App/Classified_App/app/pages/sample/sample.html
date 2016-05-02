@@ -1,0 +1,35 @@
+<ion-navbar id="title_text"  custom_theme *navbar>
+  <ion-title>
+    Sign In
+  </ion-title>
+</ion-navbar>
+
+        
+<ion-content>
+    
+    <ion-list>
+            
+            <ion-item>
+               <ion-label floating >Input #1</ion-label>
+               <ion-input #input1></ion-input>
+            </ion-item>
+            
+            <ion-item>
+               <ion-label floating >Input #2</ion-label>
+               <ion-input #input2></ion-input>
+            </ion-item>
+             
+        </ion-list>
+        
+       
+        <ion-card-content>
+            <!--<button block round default (click)="login(email,password)">Log In</button>-->
+            <button block round default (click)="submitSampleData(input1,input2)">
+                Submit
+            </button>
+            <button block round default (click)="getItem()">
+                Get
+            </button>
+        </ion-card-content>
+  
+</ion-content>
