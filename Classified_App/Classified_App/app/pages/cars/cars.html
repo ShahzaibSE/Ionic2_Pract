@@ -20,6 +20,15 @@
       </ion-col>
   </ion-row>-->
   
+  <ion-card>
+    <ion-card *ngFor="#cars of Car_Ads">
+      <div id="car_ad_section">
+        <h2 id="ad_title">{{cars.title}}</h2>
+        <p>{{cars.description}}</p>
+        <p>{{cars.price}}</p>
+      </div>
+    </ion-card>
+  </ion-card>
 
   
 </ion-content>

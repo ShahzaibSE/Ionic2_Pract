@@ -12,6 +12,7 @@ import {AdAdd} from './../addAd/add_Ad';
 import {Search} from './../search/search';
 import {NewAd} from './../newAd/newAd';
 import {Login} from './../login/login';
+import {House} from './../houses/house';
 
 //Sample Component to Test.
 import {Sample} from './../sample/sample';
@@ -67,7 +68,7 @@ export class Main {
 
   }
   
-  Show_More_Catagories()
+  Show_More_Categories()
   {
       //this.show =  this.catagories ? false:true;
       let More_Catagories = ActionSheet.create({
@@ -123,6 +124,41 @@ export class Main {
       this.nav.present(More_Catagories);
   }
   
+  _Show_More_Categories()
+  {
+    let $ActionSheet = ActionSheet.create({
+        title : "More Categories",
+        buttons : [
+            {
+                text:"Cars",
+                handler:()=>{
+                    this.nav.push(Car);
+                }
+            },
+            {
+                text:"Laptops",
+                handler:()=>{
+                    this.nav.push(Laptop);
+                }
+            },
+            {
+                text:"House",
+                handler:()=>{
+                    this.nav.push(House);
+                }
+            },
+            {
+                text:"Cancel",
+                handler:()=>{
+                    let cancel = Alert.create({
+                        title:"Cancel"
+                    })
+                }
+            }
+        ]
+    })   
+  }
+  
   //Navigation Handlers.
   Register()
   {
@@ -147,7 +183,7 @@ export class Main {
   
   getyourads()
   {
-      var ad_keys = this._AdAdd.getAds()
+      var ad_keys = this._AdAdd.getAds();
       console.log(`Ad keys : ${ad_keys}`);
       
       console.log("These are the ads");

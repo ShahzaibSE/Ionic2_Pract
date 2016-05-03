@@ -8,7 +8,7 @@ import {Main} from './../main/main';
   templateUrl: 'build/pages/bikes/bikes.html'
 })
 
-export class Bike {
+export class House {
      
    constructor(public nav:NavController , public viewController:ViewController) {
     
