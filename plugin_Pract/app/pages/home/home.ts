@@ -118,6 +118,16 @@ export class HomePage {
        //let status : Device;
        console.log(Device.device);
        
+       let alert =  Alert.create(
+           {
+               title:"Device Information",
+               subTitle : JSON.stringify(Device.device),
+               buttons : ['Ok']
+           }
+       )
+       
+       this.nav.present(alert);
+       
        /*let specifications = Alert.create(
            {
                title:status.model,

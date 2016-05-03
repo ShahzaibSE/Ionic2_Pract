@@ -1,0 +1,36 @@
+.home {
+  
+}
+
+/*ion-card-content > .info_heading
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    background-color:darkslateblue;
+    text-transform: uppercase;
+}*/
+
+
+#mainHeading
+{
+    background-color:limegreen;
+    padding-top:50px;
+    padding-bottom: 50px;
+    text-align:center;
+}   
+
+.table_border
+{
+    border-style: solid;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+$mytheme:
+(
+    theme1 limegreen
+);
+
+#title_background
+{
+    background-color: salmon;
+}

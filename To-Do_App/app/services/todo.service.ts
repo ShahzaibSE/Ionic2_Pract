@@ -40,6 +40,7 @@ export class Todo_Service
           
     }
     
+    
     getTasks()
     {
         console.log(localStorage.length);
@@ -74,7 +75,7 @@ export class Todo_Service
     {
         for(let i=0;i<localStorage.length;i++)
         {
-            if(localStorage.key(i))
+            if(localStorage.key(i) == Tid)
             {
                 console.log("Key Found");
                 localStorage.setItem(localStorage.key(i),JSON.stringify({Tid:Tid,Tname:Tname}));
@@ -107,6 +108,14 @@ export class Todo_Service
         {
             console.log("Specfic key not found");
         }*/
+    }
+    
+    deleteTodo()
+    {
+        for(var i=0;i<localStorage.length;i++)
+        {
+            //localStorage.removeItem()
+        }
     }
     
     test()

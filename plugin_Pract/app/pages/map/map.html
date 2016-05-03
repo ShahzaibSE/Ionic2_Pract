@@ -1,0 +1,35 @@
+<ion-navbar mytheme  *navbar>
+  <ion-title class="title_background">
+    Map
+  </ion-title>
+</ion-navbar>
+
+<ion-content mytheme>
+    
+   <ion-card> 
+    <ion-card-content>
+        <h1>Pluggin Demo</h1>
+    </ion-card-content>
+    
+    <ion-card-content>
+           <button block round primary (click)="getMap()">Map</button>
+           <br/>
+           <button block round favorite (click)="loadMap()">Load Map</button>
+           <br/>
+           <button block round favorite (click)="test_Navigator()">Test Navigator Locator</button>
+        </ion-card-content>
+        </ion-card>
+        
+     <ion-card>
+        <div>{{navigator_location | json}}</div>
+     </ion-card>   
+     
+     <ion-row>
+       <ion-col width-100>  
+         <ion-card>
+            <iframe src="http://maps.google.co.uk/maps?q=moma+new+york&amp;output=embed"></iframe>
+         </ion-card>
+       </ion-col>
+    </ion-row>
+  
+</ion-content>

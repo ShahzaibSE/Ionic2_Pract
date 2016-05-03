@@ -1,0 +1,21 @@
+<ion-navbar danger *navbar>
+  <ion-title>
+    Home
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home">
+  <ion-card>
+    <ion-card-content>
+      <button (click)="takePicture()" custom_theme block>
+          <ion-icon name="camera"></ion-icon>
+        </button> 
+    </ion-card-content>
+    <ion-card-content>
+      <img src="{{ImageData}}">
+    </ion-card-content>
+    <ion-card-title>
+      Captured Image
+    </ion-card-title>
+  </ion-card>
+</ion-content>

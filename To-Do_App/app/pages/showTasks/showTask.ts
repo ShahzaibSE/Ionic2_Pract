@@ -1,5 +1,6 @@
 import {Page} from 'ionic-angular';
 import {Http ,Response, RequestOptions, Headers} from 'angular2/http'; 
+import {EventEmitter} from 'angular2/core';
 
 /*//Import Model.
 import Tasks from './../../model/task_model';*/
@@ -19,7 +20,12 @@ export class Show {
   //parsed tasks into string.
   _tasks : {Tid:any,Tname:any}[] = []
   
+  //Event Emitter.
+  deleteEvent:EventEmitter<Todo>;
+  
   constructor(public ToDo:Todo_Service) {
+    
+    this.deleteEvent = new EventEmitter();
 
   }
   
@@ -28,6 +34,7 @@ export class Show {
     this.tasks = this.ToDo.getTodo();
     console.log("ToDos:");
     console.log(this.tasks);
+    
   }
   
   get_Task()
@@ -43,5 +50,17 @@ export class Show {
     
     console.log("Your Todos");
     console.log(`ToDos : ${this.tasks}`);
+  }
+  
+  deleteTodo()
+  {
+   var key_data_to_delete = this.ToDo.getTasks(); 
+   
+   for(var i=0;i<localStorage.length;i++)
+   {  
+     this.deleteEvent.emit(localStorage.getItem(key_data_to_delete[i]));
+   }
+    
+   //this.deleteEvent.add()
   }
 }

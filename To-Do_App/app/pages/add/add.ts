@@ -25,5 +25,7 @@ export class Add {
   {
     //this.ToDo.addTodo(Tid,Tname);
     this.ToDo.addTask(Tid,Tname);
+    Tid.value = "";
+    Tname.value ="";
   }
 }
