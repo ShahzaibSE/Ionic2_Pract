@@ -1,16 +1,19 @@
-import {Page} from 'ionic-angular';
-import {} from 'googlemaps/directions';
+import {Page,ActionSheet,Alert,NavController} from 'ionic-angular';
 
 @Page({
   templateUrl: 'build/pages/map/map.html'
 })
 export class Map {
 
-public map;  
+public map; 
+
+public markers : any[] = []; 
   
-constructor() {
+constructor(public nav:NavController) {
     this.map = null;
     this.loadMap();
+    
+    //this.Markers();
   }
  
 loadMap(){
@@ -49,7 +52,10 @@ addMarker(){
     position: this.map.getCenter()
   });
  
-  let content = "<h4>Information!</h4>";          
+  let content = "<h4>Information!</h4>";         
+  
+  //Pushing Markers.
+  this.markers.push(marker); 
  
   this.addInfoWindow(marker, content);
  
@@ -64,8 +70,61 @@ addMarker(){
  
   google.maps.event.addListener(marker, 'click', function(){
     infoWindow.open(this.map, marker);
-  });
-  
-}
+  }); 
+ }
+ 
+ Markers()
+ {
+   console.log("Markers");
+   for(let i=0;i<this.markers.length;i++){
+     console.log(this.markers[i]);
+   }
+ }
+ 
+ Options()
+ {
+   let options = ActionSheet.create({
+     title:"Options",
+     buttons:[{
+       text:"+Add Marker",
+       handler:()=>{
+         this.addMarker();
+       }
+     },
+     
+     {
+       text:"Clear Markers",
+       handler:()=>{
+         this.removeMarkers();
+       }
+     },
+     
+     {
+       text:"Cancel",
+       role:"cancel",
+       handler:()=>{
+         let cancel_message = Alert.create({
+           title:"Canceled...",
+         })
+       }
+     }]
+   })
+   
+   this.nav.present(options);
+   
+ }
+ 
+ setMapOnAll(map)
+ {
+  for(let i=0;i<this.markers.length;i++)
+  {
+    this.markers[i].setMap(map)
+  } 
+ }
+ 
+ removeMarkers()
+ {
+   this.setMapOnAll(null);
+ }
 
 }

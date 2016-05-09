@@ -2,6 +2,7 @@ import {App, Platform} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HomePage} from './pages/home/home';
 import {Map} from './pages/map/map';
+import {Map_V2} from './pages/map_v2/map_v2';
 
 @App({
   template: '<ion-nav [root]="rootPage"></ion-nav>',
