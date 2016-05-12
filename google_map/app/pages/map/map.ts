@@ -106,6 +106,7 @@ addMarker(){
          let cancel_message = Alert.create({
            title:"Canceled...",
          })
+         this.nav.present(cancel_message);
        }
      }]
    })

@@ -1,4 +1,4 @@
-import {Page,NavController,ViewController} from 'ionic-angular';
+import {Page,NavController,ViewController,Loading} from 'ionic-angular';
 
 //Import Models.
 import {AdModels} from './../../models/ad_models';
@@ -19,6 +19,8 @@ import {Ad_Submission} from './../../services/adIn.service';
 export class Car {
   
   Car_Ads:Array<AdModels>=[];
+  
+  categories : any[] = ["Laptop","Car","House"];
      
   constructor(public nav:NavController, public Ads:Ad_Submission , public viewController:ViewController) {
     
@@ -75,6 +77,7 @@ export class Car {
        }
      }
      
+     console.log();
      //Car Ads.
      for(let i=0;i<this.Car_Ads.length;i++)
      {
@@ -82,6 +85,16 @@ export class Car {
        console.log(this.Car_Ads[i]);
      }
      
+  }
+  
+  Loading()
+  {
+   let loading = Loading.create({
+     content:"Please wait..",
+     duration:2000
+   }) 
+   //Pushing Instance of the view.
+   this.nav.present(loading);
   }
   
   showCarAds()

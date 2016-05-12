@@ -1,7 +1,17 @@
-import {Page,NavController,ViewController} from 'ionic-angular';
+import {Page,NavController,ViewController,Loading} from 'ionic-angular';
+
+//Import Models.
+import {AdModels} from './../../models/ad_models';
+
+//Import Regular_Expression Email.
+import {email_regular_expression} from './../../models/login_model';
 
 //Import Home Component.
 import {Main} from './../main/main';
+
+//Import Service.
+import {Ad_Submission} from './../../services/adIn.service';
+
 
 
 @Page({
@@ -19,6 +29,11 @@ export class Bike {
   gotoHome()
   {
     this.nav.push(Main);
+  }
+  
+  getads_bike()
+  {
+    
   }
   
 }

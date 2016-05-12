@@ -112,7 +112,8 @@ export class Main {
                       //this.nav.push(Main);
                       let alert = Alert.create(
                           {
-                              title:"Cancelled"
+                              title:"Cancelled",
+                              buttons:["Ok"]
                           }
                       )
                       this.nav.present(alert);
