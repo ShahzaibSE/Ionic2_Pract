@@ -26,6 +26,10 @@ export class List {
         var result_1 = this.navParams.get('thing1');   //Here we are getting data parameter passed from DataPage Component and storing it in a data structure of any type.
         var result_2 = this.navParams.get('thing2');
         
+        var data = this.navParams.data;
+        console.log(`Data1 : ${data.thing1}`);
+        console.log(`Data2 : ${data.thing2}`);
+
         console.log(`Data1 from Data Entry Page: ${result_1}`); //Now we are logging the navParam data in the console.
         console.log(`Data2 from Data Entry Page: ${result_2}`);    
 }

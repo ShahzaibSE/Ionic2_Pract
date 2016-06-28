@@ -1,0 +1,44 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Html Quiz</ion-title>
+</ion-navbar>
+
+
+<ion-content padding>
+    
+    <ion-card id="questions">
+      <ion-card-content>
+            <p>1.	What does HTML stand for?</p>
+      </ion-card-content>
+
+        <form (submit)="GetAnswer(val)">
+          <ion-card-content>
+          <ion-list radio-group>
+             <ion-item>
+                 <ion-label>Hyper Text Marking Language</ion-label>
+                 <ion-radio checked="true" value="Hyper Text Marking Language" #val></ion-radio>
+             </ion-item>
+             <br/>
+             <ion-item>
+                 <ion-label>Hyper Text MarkUp Language</ion-label>
+                 <ion-radio  value="Hyper Text MarkUp Language" #val></ion-radio>
+             </ion-item>
+             <br/>
+             <ion-item>
+                 <ion-label>Hyper Tool MarkUp Language</ion-label>
+                 <ion-radio value="Hyper Tool MarkUp Language" #val></ion-radio>
+             </ion-item>
+            </ion-list>  
+      </ion-card-content>
+
+      <ion-card-content>
+        <button block primary round>Submit</button>
+      </ion-card-content>
+      </form>
+
+    </ion-card>
+
+
+</ion-content>

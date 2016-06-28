@@ -1,4 +1,5 @@
 import {Page,ActionSheet,Alert,NavController} from 'ionic-angular';
+import {Geolocation} from 'ionic-native';
 
 @Page({
   templateUrl: 'build/pages/map/map.html'
@@ -11,9 +12,12 @@ public markers : any[] = [];
   
 constructor(public nav:NavController) {
     this.map = null;
-    this.loadMap();
+    //this.loadMap();
+    
+    this.LoadMap();
     
     //this.Markers();
+    this.watchingPosition();
   }
  
 loadMap(){
@@ -41,7 +45,32 @@ loadMap(){
   );
  }
  
-
+ 
+//Here I am using watch. 
+LoadMap(){
+ let options = {timeout: 10000, enableHighAccuracy: true};
+ 
+  navigator.geolocation.watchPosition(
+ 
+      (position) => {
+          let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+ 
+          let mapOptions = {
+              center: latLng,
+              zoom: 15,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+          }
+ 
+          this.map = new google.maps.Map(document.getElementById("map"), mapOptions);   //Creates a new map of the given html container.
+      },
+ 
+      (error) => {
+          console.log(error);
+      }, options
+ 
+  );
+  //location.subscribe(())
+}
 
 //Adding Markers to the map.
 addMarker(){
@@ -126,6 +155,20 @@ addMarker(){
  removeMarkers()
  {
    this.setMapOnAll(null);
+ }
+ 
+ watchingPosition(){
+    /*let watch = Geolocation.watchPosition();
+    watch.subscribe((resp)=>{
+      console.log(`Latitude : ${resp.coords.latitude}`);
+      console.log(`Longitude : ${resp.coords.longitude}`);
+      //console.log(`Longitude : ${resp.longitude}`);
+    })*/ 
+    
+    navigator.geolocation.watchPosition((data)=>{
+      console.log(`Longitude : ${data.coords.longitude}`);
+      console.log(`Latitude : ${data.coords.latitude}`);
+    })
  }
 
 }

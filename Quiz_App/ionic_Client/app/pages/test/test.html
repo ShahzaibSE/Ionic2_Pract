@@ -1,0 +1,43 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Html Quiz</ion-title>
+</ion-navbar>
+
+
+<ion-content padding>
+    
+    <ion-card id="questions">
+        <form (load)="load_question()" *ngFor="let q of questions">
+          <ion-card-content>
+            <p>{{q.question}}</p>
+          </ion-card-content>
+          <ion-card-content>
+          <ion-list radio-group>
+             <ion-item>
+                 <ion-label>{{q.option1}}</ion-label>
+                 <ion-radio checked="true" value="q.option1" #val></ion-radio>
+             </ion-item>
+             <br/>
+             <ion-item>
+                 <ion-label>{{q.option2}}</ion-label>
+                 <ion-radio  value="q.option2" #val></ion-radio>
+             </ion-item>
+             <br/>
+             <ion-item>
+                 <ion-label>{{q.option3}}</ion-label>
+                 <ion-radio value="q.option3" #val></ion-radio>
+             </ion-item>
+            </ion-list>  
+      </ion-card-content>
+
+      <ion-card-content>
+        <button block primary round>Submit</button>
+      </ion-card-content>
+      </form>
+
+    </ion-card>
+
+
+</ion-content>

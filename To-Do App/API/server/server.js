@@ -14,7 +14,7 @@ var server = app.listen(port, function () {
 var tasks = [];
 //app.set('views','./www');
 //static file server.
-app.use(express.static(path.join(__dirname, './../../ToDoApp')));
+app.use(express.static(path.join(__dirname, './../../ToDoApp/www')));
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use('/getData/:id?', function (req, res, next) {
